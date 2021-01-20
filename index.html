@@ -31,41 +31,60 @@
 
 
     <main>
-        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-        <p>En plein centre ville ou en pleine nature</p>
-        <div class="searchFilters">
-            <h2 class="searchFiltersTitle">Filtres</h2>
-            <div class="searchFiltersFilter">
-                <div class="searchFilterIcon">
-                    <i class="fas fa-money-bill-wave"></i>
-                </div>
-                <span class="searchFilterTitle">Économique</span>
+        <section class="search">
+            <div class="searchBarTittle">
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre ville ou en pleine nature</p>
+                <form method="post" action="traitement.php">
+                    <p>
+                        <i class="fas fa-map-marker-alt searchFormWrapiconIcon" aria-hidden="true"></i>
+                        <input class="searchFormSearchinput" type="search" name="city" placeholder="Marseille,France" />
+                        <button>Rechercher<i class="searchFormSubmitinputIcon fas fa-search"
+                                aria-hidden="true"></i></button>
+                    </p>
+                </form>
             </div>
-            <div class="searchFilter">
-                <div class="searchFilterIcon">
-                    <i class="fas fa-child"></i>
+
+            <div class="searchFilters">
+                <h2 class="searchFiltersTitle">Filtres</h2>
+                <div class="searchFilter">
+                    <div class="searchFilterIcon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <span class="searchFilterTitle">Économique</span>
                 </div>
-                <span class="searchFilterTitle">Familial</span>
-            </div>
-            <div class="searchFilter">
-                <div class="searchFilterFilterIcon">
-                    <i class="fas fa-heart"></i>
+
+                <div class="searchFilter">
+                    <div class="searchFilterIcon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <span class="searchFilterTitle">Familial</span>
                 </div>
-                <span class="searchFilterTitle">Romantique</span>
-            </div>
-            <div class="searchFilter">
-                <div class="searchFilterIcon">
-                    <i class="fas fa-dog"></i>
+
+                <div class="searchFilter">
+                    <div class="searchFilterIcon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <span class="searchFilterTitle">Romantique</span>
                 </div>
-                <span class="searchFilterTitle">Animaux autorisés</span>
-            </div>
-            <div class="searchFilter">
-                <div class="searchFilterIcon">
-                    <i class="fas fa-info"></i>
+
+                <div class="searchFilter">
+                    <div class="searchFilterIcon">
+                        <i class="fas fa-dog"></i>
+                    </div>
+                    <span class="searchFilterTitle">Animaux autorisés</span>
                 </div>
-                <span class="searchFilterTitle">Plus de 500 logements sont disponibles dans cette ville</span>
             </div>
-        </div>
+
+                <div class="info">
+                    <div class="searchFilterIcon">
+                        <i class="fas fa-info"></i>
+                        <i class="far fa-circle"></i>
+                    </div>
+                    <span class="infoTitle">Plus de 500 logements sont disponibles dans cette ville</span>
+                </div>
+            
+        </section>
 
         <!-- Hosting -->
         <section class="bigContainer">
@@ -186,7 +205,11 @@
             <!-- Most Popular -->
 
             <aside class="popularHosting">
-                <h2 class="accommodationTitleAside">Les plus populaires</h2>
+                <div class="asideTitle">
+                    <h2>Les plus populaires</h2>
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                
                 <div class="hotelAside">
                     <a href="#">
                         <figure>
@@ -244,29 +267,60 @@
         <!-- Activities -->
 
         <section class="activity">
-            <h2 id="activityTitle">Activités à Marseille</h2>
+            <h2>Activités à Marseille</h2>
             <div class="activityContainer">
-                <div class="activityContainer1">
-                    <img class="photo" src="images/activités/vieux_port.jpg" alt="Vieux Port">
-                    <h3 class="photoTitle">Vieux Port</h3>
+
+                <div class="activityColumn1">
+                    <a href="#">
+                    <div class="port">
+                        <img class="photo" src="images/activités/vieux_port.jpg" alt="Vieux Port">
+                        <h3 class="photoTitle">Vieux Port</h3>
+                    </div>
+                </a>
                 </div>
-                <div class="activityContainer2">
-                    <img class="smallPhoto" src="images/activités/pomegues.jpg" alt="Fort de Pomègues">
-                    <h3 class="photoTitle">Fort de Pomègues</h3>
-                    <img class="smallPhoto" src="images/activités/frioul.jpg" alt="Iles du Frioul">
-                    <h3 class="photoTitle">Iles du Frioul</h3>
+
+                <div class="activityColumn2">
+                    <div class="pomegues">
+                        <a href="#">
+                        <img class="smallPhoto" src="images/activités/pomegues.jpg" alt="Fort de Pomègues">
+                        <h3 class="photoTitle">Fort de Pomègues</h3>
+                    </a>
+                    </div>
+
+                    <div class="frioul">
+                        <a href="#">
+                        <img class="smallPhoto" src="images/activités/frioul.jpg" alt="Iles du Frioul">
+                        <h3 class="photoTitle">Iles du Frioul</h3>
+                    </a>
+                    </div>
                 </div>
-                <div class="activityContainer3">
-                    <img class="photo" src="images/activités/calanques.jpg" alt="Parc National des Calanques">
-                    <h3 class="photoTitle">Parc National des Calanques</h3>
+
+                <div class="activityColumn3">
+                    <a href="#">
+                    <div class="calanques">
+                        <img class="photo" src="images/activités/calanques.jpg" alt="Parc National des Calanques">
+                        <h3 class="photoTitle">Parc National des Calanques</h3>
+                    </div>
+                </a>
                 </div>
-                <div class="activityContainer4">
-                    <img class="smallPhoto" src="images/activités/notre_dame_de_la_garde.jpg"
-                        alt="Notre Dame de la Garde">
-                    <h3 class="photoTitle">Notre-Dame-de-la-Garde</h3>
-                    <img class="smallPhoto" src="images/activités/longchamp.jpg" alt="Parc Longchamp">
-                    <h3 class="photoTitle">Parc Longchamp</h3>
+
+                <div class="activityColumn4">
+                    <div class="garde">
+                        <a href="#">
+                        <img class="smallPhoto" src="images/activités/notre_dame_de_la_garde.jpg"
+                            alt="Notre Dame de la Garde">
+                        <h3 class="photoTitle">Notre-Dame-de-la-Garde</h3>
+                    </a>
+                    </div>
+
+                    <div class="longchamp">
+                        <a href="#">
+                        <img class="smallPhoto" src="images/activités/longchamp.jpg" alt="Parc Longchamp">
+                        <h3 class="photoTitle">Parc Longchamp</h3>
+                    </a>
+                    </div>
                 </div>
+
             </div>
         </section>
 
@@ -276,27 +330,27 @@
 
     <footer>
         <div class="column">
-            <h2 class="footertitle">A propos</h2>
+            <h2 class="footerTitle">A propos</h2>
             <ul>
-                <li class="footercolumn">Fonctionnement du site</li>
-                <li class="footercolumn">Conditions générales de vente</li>
-                <li class="footercolumn">Données et confidentialité</li>
+                <li class="footerElements">Fonctionnement du site</li>
+                <li class="footerElements">Conditions générales de vente</li>
+                <li class="footerElements">Données et confidentialité</li>
             </ul>
         </div>
 
         <div class="column">
-            <h2 class="footertitle">Nos hébergements</h2>
+            <h2 class="footerTitle">Nos hébergements</h2>
             <ul>
-                <li class="footercolumn">Charte qualité</li>
-                <li class="footercolumn">Soumettre votre hôtel</li>
+                <li class="footerElements">Charte qualité</li>
+                <li class="footerElements">Soumettre votre hôtel</li>
             </ul>
         </div>
 
         <div class="column">
-            <h2 class="footertitle">Assistance</h2>
+            <h2 class="footerTitle">Assistance</h2>
             <ul>
-                <li class="footercolumn">Centre d'aide</li>
-                <li class="footercolumn">Nous contacter</li>
+                <li class="footerElements">Centre d'aide</li>
+                <li class="footerElements">Nous contacter</li>
             </ul>
         </div>
     </footer>
