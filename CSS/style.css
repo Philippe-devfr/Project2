@@ -1,54 +1,54 @@
-body
-{
-    /* background-color: white; */
-    padding: 0;
+body{
     margin: 0;
     font-family: 'Raleway', sans-serif;
 }
+
+/* *{
+    box-sizing: border-box;
+} */
 
 
 /* HEADER */
 
 
-.containerHeader
-{
+.containerHeader{
     display: flex;
     justify-content: space-between;
     margin: 0em 2em;
 }
 
-.menuNav
-{
+/* .menuNav{
     display: flex;
     width: 30%;
+} */
+.menuNav{
+    display: flex;
 }
 
-header a
-{
+header a{
     text-decoration: none;
 }
 
-.navLink 
-{
+.navLink{
     padding: 1.5em;
     color: inherit;
 }
 
-.navLink:hover
-{
+.navLink:hover{
     border-top: 2px solid #0065FC;
     color: #0065FC;
 }
 
-.navSignup
-{
+.navSignup{
     color: #0065FC;
     font-weight: bold; 
     padding: 1.5em;
 }
 
 
+
 /* SEARCH */
+
 
 .search{
     margin-left: 2rem;
@@ -89,7 +89,9 @@ header a
 }
 
 
+
 /* SEARCH FILTERS */
+
 
 .searchFiltersTitle{
     font-weight: bold;
@@ -105,8 +107,7 @@ header a
     background: #deebff;
 }
 
-.searchFilter
-{
+.searchFilter{
     display: flex;
     align-items: center;
     border: 2px solid #F2F2F2;
@@ -117,8 +118,7 @@ header a
     cursor: pointer;
 }
 
-.searchFilter i
-{
+.searchFilter i{
     color: #0065FC;
     background: #DEEBFF;
     border: 13px solid #DEEBFF;
@@ -126,22 +126,19 @@ header a
 }
 
 
-.searchFilterTitle
-{
+.searchFilterTitle{
     padding-right: 20px;
     padding-left: 20px;
     font-weight: bold;
 }
 
-.info
-{
+.info{
     display: flex;
     align-items: center;
     margin-top: 1.5em;
 }
 
-.fa-info
-{
+.fa-info{
     color: #0065FC;
     font-size: 0.6em;
     border: 1px solid lightgrey;
@@ -151,13 +148,13 @@ header a
 }
 
 
+
 /* HOTEL */
 
 
 .bigContainer{
     display: flex;
     flex-flow: row nowrap;
-    /* justify-content: space-between; */
     margin-top: 2em;
 }
 
@@ -169,21 +166,16 @@ header a
     margin-left: 2em;
     padding: 2em;
     border-radius: 25px;
+    box-sizing: border-box;
 }
 
-.flexContainer h2{
-    margin-left: 1em;
-}
-
-.accommodationBlock
-{
+.accommodationBlock{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.hotel img
-{
+.hotel img{
    border-top-left-radius: 25px;
    border-top-right-radius: 25px;
    object-fit: cover;
@@ -191,106 +183,105 @@ header a
    height: 8em;
 }
 
-.hotel a
-{
+.hotel a{
     text-decoration: none;
     color: black;
 }
 
-.fa-star
-{
+.fa-star{
     color: #0065FC;
     font-size: small;
 }
      
-.hotel figure
-{
+.hotel figure{
     background: #ffffff;
     border: 5px solid #ffffff;
     border-radius: 25px;
     box-shadow: 4px 4px 6px #aaa;
     margin: 0;
-    width: 15em;
+    width: 18em;
     margin-bottom: 2em;
 }
 
-.hotel figcaption
-{
-    margin-left: 5px;
+.hotel figcaption{
+    margin-left: 15px;
+    margin-bottom: 5px;
+    line-height: 0.8;
 }
 
+h3{
+    margin: 0;
+    padding-top: 0.5em;
+}
 
 
 /* MOST POPULAR */
 
-.asideTitle
-{
+
+.asideTitle{
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 1em;
     box-sizing: border-box;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
-.popularHosting
-{
+.popularHosting{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: #F2F2F2;
     margin-left: 2em;
     margin-right: 2em;
     border-radius: 25px;
+    padding: 2em 0;
 }
 
-.hotelAside img
-{
+.hotelAside img{
    border-top-left-radius: 25px;
    border-bottom-left-radius: 25px;
-   width: 8em;
-   height: 8em;
+   width: 10em;
+   height: 10em;
    object-fit: cover;
 }
 
-.hotelAside a
-{
+.hotelAside a{
     text-decoration: none;
     color: black;
 }
 
-.hotelAside figure
-{
+.hotelAside figure{
     display: flex;
     background: #ffffff;
     border: 5px solid #ffffff;
     border-radius: 25px;
     box-shadow: 4px 4px 6px #aaa;
-    /* width: 20em; */
 }
 
-.hotelAside figcaption
-{
+.hotelAside figcaption{
     width: 12em;
-    height: 100%;
-    margin-left: 5px;
+    padding-left: 30px;
 }
 
+.hotelAside .fa-star{
+    padding-top: 2.5em;
+}
 
 
 /* ACTIVITIES */
 
 
-.activity
-{
+/* .activity{
     margin: 4em 2em;
 }
 
-.photoTitle
-{
+.photoTitle{
     margin: 20px;
 }
 
-.activityContainer
-{
+.activityContainer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -301,21 +292,19 @@ header a
     color: black;
 }
 
-.port
-{
-    box-sizing: border-box;
+.port{
     box-shadow: 4px 4px 6px #aaa;
     border-radius: 25px;
     overflow: hidden;
+    height: 100%;
 }
-
 
 .pomegues{
     border-radius: 25px;
     box-shadow: 4px 4px 6px #aaa;
     object-fit: cover;
     overflow: hidden;
-    padding-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .frioul{
@@ -330,15 +319,15 @@ header a
     border-radius: 25px;
     overflow: hidden;
     object-fit: cover;
-
+    height: 100%;
 }
-
 
 .garde{
     border-radius: 25px;
     box-shadow: 4px 4px 6px #aaa;
     object-fit: cover;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .longchamp{
@@ -348,17 +337,126 @@ header a
     overflow: hidden;
 }
 
-.smallPhoto
-{
+.smallPhoto{
     height: 200px;
     width: 300px;
     object-fit: cover;
 }
 
 .photo{
-    height: 450px;
+    height: 490px;
     width: 300px;
     object-fit: cover;
+} */
+
+
+
+
+.activity{
+    margin: 4em 2em;
+}
+
+.photoTitle{
+    padding: 20px;
+    margin: 0;
+}
+
+.activityContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.activityContainer a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.activityColumn1{
+    box-sizing: border-box;
+    box-shadow: 4px 4px 6px #aaa;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.photo{
+    object-fit: cover;
+    width: 350px;
+    height: 400px;
+}
+
+.pomegues{
+    border-radius: 25px;
+    box-shadow: 4px 4px 6px #aaa;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.pomegues img{
+    height: 200px;
+    width: 330px;
+    object-fit: cover;
+}
+
+.frioul{
+    box-sizing: border-box;
+    border-radius: 25px;
+    box-shadow: 4px 4px 6px #aaa;
+    overflow: hidden;
+}
+
+.frioul img{
+    height: 100px;
+    width: 330px;
+    object-fit: cover;
+}
+
+.activityColumn2{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.activityColumn3{
+    box-sizing: border-box;
+    box-shadow: 4px 4px 6px #aaa;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.garde{
+    border-radius: 25px;
+    box-shadow: 4px 4px 6px #aaa;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.garde img{
+    height: 150px;
+    width: 330px;
+    object-fit: cover;
+}
+
+.longchamp{
+    box-sizing: border-box;
+    border-radius: 25px;
+    box-shadow: 4px 4px 6px #aaa;
+    overflow: hidden;
+}
+
+.longchamp img{
+    height: 150px;
+    width: 330px;
+    object-fit: cover;
+}
+
+.activityColumn4{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
 }
 
 
@@ -366,27 +464,23 @@ header a
 /* FOOTER */
 
 
-footer 
-{
+footer{
     background: #f2f2f2;
     display: flex;
     justify-content: space-between;
     padding: 0 2em;
 }
 
-.footerTitle
-{
+.footerTitle{
     font-weight: bold;
     font-size: 1em;
     padding: 2em 0 1.5em 0;
     margin: 0;
 }
 
-.footerElements
-{    
+.footerElements{    
     list-style: none;
     padding: 0 15em 1em 0;
-    
 }
 
 ul{
@@ -394,3 +488,45 @@ ul{
     padding: 0;
 }
 
+
+
+/* MEDIA QUERIES */
+
+
+@media screen and (min-width: 1600px) {
+    body{
+        max-width: 100em;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1465px) {
+    .activityContainer{
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        height: 2500px;
+    }
+
+    .frioul, .pomegues, .garde, .longchamps{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .activity img{
+        width: 100%;
+        height: 300px;
+    }
+    footer{
+        display:flex;
+        flex-direction: column;
+    }
+}
+
+/* @media screen and (max-width: 780px) {
+    footer{
+        display:flex;
+        flex-direction: column;
+    }
+} */
