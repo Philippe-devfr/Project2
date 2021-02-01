@@ -502,31 +502,37 @@ ul{
 
 @media screen and (max-width: 1465px) {
     .activityContainer{
-        display: flex;
-        flex-direction: column;
-        align-content: space-between;
-        height: 2500px;
+        display: block;
+        padding: 20px;
     }
 
-    .frioul, .pomegues, .garde, .longchamps{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    .activityColumn1, .pomegues, .frioul, .activityColumn3, .garde{
+        margin-bottom: 30px;
     }
 
+    .bigContainer{
+        display: block;
+    }
+
+    .flexContainer{
+        margin-bottom: 30px;
+        background-color: white;
+        display: flex;
+        order: 1;
+    }
+
+    .popularHosting{
+        display: flex;
+        order: 2;
+    }
     .activity img{
         width: 100%;
         height: 300px;
     }
+}
+@media screen and (max-width: 780px) {
     footer{
         display:flex;
         flex-direction: column;
     }
 }
-
-/* @media screen and (max-width: 780px) {
-    footer{
-        display:flex;
-        flex-direction: column;
-    }
-} */
