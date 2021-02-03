@@ -3,10 +3,6 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
-/* *{
-    box-sizing: border-box;
-} */
-
 
 /* HEADER */
 
@@ -17,10 +13,6 @@ body{
     margin: 0em 2em;
 }
 
-/* .menuNav{
-    display: flex;
-    width: 30%;
-} */
 .menuNav{
     display: flex;
 }
@@ -88,6 +80,10 @@ header a{
     outline: none;
 }
 
+.searchIcon{
+    display: none;
+}
+
 
 
 /* SEARCH FILTERS */
@@ -145,6 +141,10 @@ header a{
     padding: 6px 8px;
     border-radius: 20px;
     margin-right: 1em;
+}
+
+.buttonBis{
+    display: none;
 }
 
 
@@ -270,86 +270,8 @@ h3{
 }
 
 
+
 /* ACTIVITIES */
-
-
-/* .activity{
-    margin: 4em 2em;
-}
-
-.photoTitle{
-    margin: 20px;
-}
-
-.activityContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.activityContainer a{
-    text-decoration: none;
-    color: black;
-}
-
-.port{
-    box-shadow: 4px 4px 6px #aaa;
-    border-radius: 25px;
-    overflow: hidden;
-    height: 100%;
-}
-
-.pomegues{
-    border-radius: 25px;
-    box-shadow: 4px 4px 6px #aaa;
-    object-fit: cover;
-    overflow: hidden;
-    margin-bottom: 30px;
-}
-
-.frioul{
-    border-radius: 25px;
-    box-shadow: 4px 4px 6px #aaa;
-    object-fit: cover;
-    overflow: hidden;
-}
-
-.calanques{
-    box-shadow: 4px 4px 6px #aaa;
-    border-radius: 25px;
-    overflow: hidden;
-    object-fit: cover;
-    height: 100%;
-}
-
-.garde{
-    border-radius: 25px;
-    box-shadow: 4px 4px 6px #aaa;
-    object-fit: cover;
-    overflow: hidden;
-    margin-bottom: 30px;
-}
-
-.longchamp{
-    border-radius: 25px;
-    box-shadow: 4px 4px 6px #aaa;
-    object-fit: cover;
-    overflow: hidden;
-}
-
-.smallPhoto{
-    height: 200px;
-    width: 300px;
-    object-fit: cover;
-}
-
-.photo{
-    height: 490px;
-    width: 300px;
-    object-fit: cover;
-} */
-
-
 
 
 .activity{
@@ -501,36 +423,134 @@ ul{
 }
 
 @media screen and (max-width: 1465px) {
-    .activityContainer{
-        display: block;
-        padding: 20px;
+    .searchFilters{
+        display: flex;
+        flex-wrap: wrap;
     }
-
-    .activityColumn1, .pomegues, .frioul, .activityColumn3, .garde{
+    .searchFilter{
         margin-bottom: 30px;
     }
+    .searchFiltersTitle{
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    
 
     .bigContainer{
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 
     .flexContainer{
         margin-bottom: 30px;
         background-color: white;
         display: flex;
+        padding: 0;
         order: 1;
+    }
+
+    .hotel:nth-child(3){
+        break-after: always;
+    }
+
+    .accommodationBlock{
+        width: 100%;
     }
 
     .popularHosting{
         display: flex;
-        order: 2;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
     }
+
+    .activityContainer{
+        display: block;
+        padding: 0px;
+    }
+
+    .activityColumn1, .pomegues, .frioul, .activityColumn3, .garde{
+        margin-bottom: 30px;
+    }
+
     .activity img{
         width: 100%;
         height: 300px;
     }
+
 }
+
+@media screen and (max-width: 965px){
+    .flexContainer{
+        margin-bottom: 30px;
+        background-color: white;
+        display: flex;
+        padding: 0;
+        order: 1;
+    }
+
+    .hotel:nth-child(1){
+        break-after: always;
+    }
+}
+
 @media screen and (max-width: 780px) {
+    .containerHeader{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .navLink{
+        order: 2;
+        border-bottom: 2px solid #F2F2F2;
+        width: 100%;
+    }
+
+    .navLink:hover{
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+        color: #0065FC;
+    }
+
+    .navSignup{
+        order: 1;
+        flex-basis: 100%;
+    }
+
+    .searchButton{
+        display: none;
+    }
+
+    .buttonBis{
+        display: contents;
+    }
+
+    .fa-search{
+        background-color: #0065FC;
+        border: none;
+        color: white;
+        font-size: 1em;
+        padding: 20px 16px 20px 16px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    .activityContainer{
+        display: block;
+        padding: 0px;
+    }
+
+    .activityColumn1, .pomegues, .frioul, .activityColumn3, .garde{
+        margin-bottom: 30px;
+    }
+
+    .activity img{
+        width: 100%;
+        height: 300px;
+    }
+
     footer{
         display:flex;
         flex-direction: column;
