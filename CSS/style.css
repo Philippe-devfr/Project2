@@ -429,7 +429,7 @@ ul{
     }
 }
 
-@media screen and (max-width: 1465px) {
+@media all and (max-width: 1465px) {
     .searchFilters{
         display: flex;
         flex-wrap: wrap;
