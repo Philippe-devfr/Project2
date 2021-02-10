@@ -428,7 +428,7 @@ ul{
     }
 }
 
-@media all and (max-width: 1465px) {
+@media screen and (max-width: 1465px) {
     .searchFilters{
         display: flex;
         flex-wrap: wrap;
@@ -455,8 +455,8 @@ ul{
         order: 1;
     }
 
-    .hotel:nth-child(3){
-        break-after: always;
+    .accommodationBlock>* {
+        flex: 0 0 350px;
     }
 
     .accommodationBlock{
@@ -468,6 +468,10 @@ ul{
         margin-left: 0;
         margin-right: 0;
         border-radius: 0;
+    }
+
+    .hotel{
+        margin: auto;
     }
 
     .activityContainer{
@@ -494,13 +498,9 @@ ul{
         padding: 0;
         order: 1;
     }
-
-    .hotel:nth-child(1){
-        break-after: always;
-    }
 }
 
-@media screen and (max-width: 780px) {
+@media all and (max-width: 780px) {
     .containerHeader{
         flex-wrap:wrap;
         }
@@ -536,7 +536,6 @@ ul{
        }
        
 
-
     .searchButton{
         display: none;
     }
@@ -557,17 +556,6 @@ ul{
         cursor: pointer;
     }
 
-
-
-    .searchFiltersTitle{
-        break-after: always;
-    }
-
-
-
-    .hotel{
-        margin: auto;
-    }
 
     .flexContainer{
         margin-bottom: 0;
