@@ -8,33 +8,36 @@ body{
 
 
 .containerHeader{
-    display: flex;
-    justify-content: space-between;
-    margin: 0em 2em;
+    display: flex;    
+    align-items: center;
+    margin: 2em;
 }
 
-.menuNav{
-    display: flex;
+.navMenu{
+    display: flex;    
+    margin-left:auto;
 }
 
-header a{
+.navLink, .navSignup{
+    list-style: none;
+}
+
+.navLink a{
     text-decoration: none;
-}
-
-.navLink{
-    padding: 1.5em;
     color: inherit;
+    padding: 43px 40px;
 }
 
-.navLink:hover{
-    border-top: 2px solid #0065FC;
-    color: #0065FC;
+.navLink a:hover{
+    color: #0065fc;
+    border-top: 2px solid #0065fc;
 }
 
-.navSignup{
-    color: #0065FC;
-    font-weight: bold; 
-    padding: 1.5em;
+.navSignup a{
+    color: #0065fc;
+    font-weight: bold;
+    text-decoration: none;
+    padding-left: 40px;
 }
 
 
@@ -46,7 +49,7 @@ header a{
     margin-left: 2rem;
 }
 
-.searchBarTittle form{
+.searchBarTitle form{
     margin-top: 30px;
 }
 
@@ -57,7 +60,7 @@ header a{
     border-bottom-left-radius: 20px;
 }
 
-.searchBarTittle button{
+.searchBarTitle button{
     background-color: #0065FC;
     border: none;
     color: white;
@@ -191,6 +194,10 @@ header a{
 .fa-star{
     color: #0065FC;
     font-size: small;
+}
+
+.grey{
+        color: #F2F2F2;
 }
      
 .hotel figure{
@@ -496,26 +503,40 @@ ul{
 
 @media screen and (max-width: 780px) {
     .containerHeader{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .navLink{
-        order: 2;
-        border-bottom: 2px solid #F2F2F2;
+        flex-wrap:wrap;
+        }
+
+    .navMenu{
+        margin-top: 25px;
         width: 100%;
-    }
+        order:3;
+       }
+
+    .navMenu a{
+        display: flex;
+        justify-content: center;
+       }
+
+    .navMenu li {
+        padding: 0;
+        border-bottom: 2px solid #F2F2F2;
+        width: 50%;
+       }
+       
+    .navSignupMenu{
+         margin-left:auto; 
+         order:2;
+       }
 
     .navLink:hover{
-        border-top: none;
         border-bottom: 2px solid #0065FC;
-        color: #0065FC;
-    }
 
-    .navSignup{
-        order: 1;
-        flex-basis: 100%;
-    }
+       }
+    .navLink a:hover{
+        border-top: none;
+       }
+       
+
 
     .searchButton{
         display: none;
@@ -536,6 +557,26 @@ ul{
         outline: none;
         cursor: pointer;
     }
+
+
+
+    .searchFiltersTitle{
+        break-after: always;
+    }
+
+
+
+    .hotel{
+        margin: auto;
+    }
+
+    .flexContainer{
+        margin-bottom: 0;
+    }
+
+    .flexContainer h4{
+        margin-bottom: 0;
+    }
     
     .activityContainer{
         display: block;
@@ -551,8 +592,14 @@ ul{
         height: 300px;
     }
 
+    #activityTitle{
+        margin-top: 0;
+    }
+
     footer{
         display:flex;
         flex-direction: column;
     }
+
+
 }
