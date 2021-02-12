@@ -103,7 +103,7 @@ body{
 }
 
 .searchFilter:hover{
-    background: #deebff;
+    background: #DEEBFF;
 }
 
 .searchFilter{
@@ -121,6 +121,7 @@ body{
     color: #0065FC;
     border: 13px solid #DEEBFF;
     border-radius: 100%;
+    background: #DEEBFF;
 }
 
 
@@ -456,7 +457,7 @@ ul{
     }
 
     .accommodationBlock>* {
-        flex: 0 0 350px;
+        flex: 0 0 33.33%;
     }
 
     .accommodationBlock{
@@ -487,7 +488,6 @@ ul{
         width: 100%;
         height: 300px;
     }
-
 }
 
 @media screen and (max-width: 965px){
@@ -556,7 +556,6 @@ ul{
         cursor: pointer;
     }
 
-
     .flexContainer{
         margin-bottom: 0;
     }
@@ -587,4 +586,13 @@ ul{
         display:flex;
         flex-direction: column;
     }
+}
+
+@media all and (max-width: 470px){
+    .hotelAside img{
+        height: auto;
+     }
+     .hotelAside figcaption {
+        width: auto;
+     }
 }
