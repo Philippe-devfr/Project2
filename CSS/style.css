@@ -41,7 +41,6 @@ body{
 }
 
 
-
 /* SEARCH */
 
 
@@ -68,7 +67,6 @@ body{
     padding: 20px 16px 20px 16px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    outline: none;
     cursor: pointer;
 }
 
@@ -80,13 +78,11 @@ body{
     padding: 19px 1em;
     border-top: 1px solid #F2F2F2;
     border-bottom: 1px solid #F2F2F2;
-    outline: none;
 }
 
 .searchIcon{
     display: none;
 }
-
 
 
 /* SEARCH FILTERS */
@@ -126,8 +122,8 @@ body{
 
 
 .searchFilterTitle{
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
     font-weight: bold;
 }
 
@@ -149,7 +145,6 @@ body{
 .buttonBis{
     display: none;
 }
-
 
 
 /* HOTEL */
@@ -207,13 +202,13 @@ body{
     box-shadow: 4px 4px 6px #aaa;
     margin: 0;
     width: 18em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .hotel figcaption{
     margin-left: 15px;
     margin-bottom: 5px;
-    line-height: 0.8;
+    line-height: 0.5;
 }
 
 h3{
@@ -249,8 +244,8 @@ h3{
 .hotelAside img{
    border-top-left-radius: 25px;
    border-bottom-left-radius: 25px;
-   width: 10em;
-   height: 10em;
+   width: 9em;
+   height: 9em;
    object-fit: cover;
 }
 
@@ -265,17 +260,17 @@ h3{
     padding: 5px;
     border-radius: 25px;
     box-shadow: 4px 4px 6px #aaa;
+    height: 9em;
 }
 
 .hotelAside figcaption{
     width: 12em;
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 .hotelAside .fa-star{
-    padding-top: 2.5em;
+    padding-top: 10px;
 }
-
 
 
 /* ACTIVITIES */
@@ -287,7 +282,6 @@ h3{
 
 .photoTitle{
     padding: 20px;
-    margin: 0;
 }
 
 .activityContainer{
@@ -301,7 +295,6 @@ h3{
     color: black;
 }
 
-
 .activityColumn1{
     box-sizing: border-box;
     box-shadow: 4px 4px 6px #aaa;
@@ -311,7 +304,7 @@ h3{
 
 .photo{
     object-fit: cover;
-    width: 350px;
+    width: 330px;
     height: 400px;
 }
 
@@ -345,7 +338,7 @@ h3{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .activityColumn3{
@@ -386,8 +379,12 @@ h3{
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
+    height: 466.5px;
 }
 
+.activityContainer>* {
+    margin: 10px 0;
+}
 
 
 /* FOOTER */
@@ -418,7 +415,6 @@ ul{
 }
 
 
-
 /* MEDIA QUERIES */
 
 
@@ -430,6 +426,27 @@ ul{
 }
 
 @media screen and (max-width: 1465px) {
+    .accommodationBlock{
+        width: 100%;
+    }
+
+    .hotel{
+        margin: auto;
+    }
+
+    .activityContainer{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 4em;
+    }
+
+    .footerElements{
+        padding: 0 0 1em 0;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
     .searchFilters{
         display: flex;
         flex-wrap: wrap;
@@ -441,8 +458,9 @@ ul{
         margin-top: 0;
         margin-bottom: 30px;
     }
-    
+}
 
+    @media screen and (max-width: 1262px){
     .bigContainer{
         display: flex;
         flex-direction: column;
@@ -456,60 +474,42 @@ ul{
         order: 1;
     }
 
-    .accommodationBlock>* {
-        flex: 0 0 33.33%;
-    }
-
-    .accommodationBlock{
-        width: 100%;
-    }
-
     .popularHosting{
         display: flex;
         margin-left: 0;
         margin-right: 0;
         border-radius: 0;
+        justify-content: space-around;
     }
 
-    .hotel{
-        margin: auto;
-    }
-
-    .activityContainer{
-        display: block;
-        padding: 0px;
-    }
-
-    .activityColumn1, .pomegues, .frioul, .activityColumn3, .garde{
-        margin-bottom: 30px;
-    }
-
-    .activity img{
-        width: 100%;
-        height: 300px;
+    .hotelAside figure {
+        margin: 0.5em 1em;
     }
 }
 
-@media screen and (max-width: 965px){
-    .flexContainer{
-        margin-bottom: 30px;
-        background-color: white;
-        display: flex;
-        padding: 0;
-        order: 1;
-    }
-}
-
-@media all and (max-width: 780px) {
+@media screen and (max-width: 780px) {
     .containerHeader{
         flex-wrap:wrap;
+        margin: 0;
         }
 
+    .containerHeader img{
+        margin: 2em 0 0 1em;
+    }
+    
+    .navSignup{
+        margin: 2em 1em 0 0;
+    }
+
     .navMenu{
-        margin-top: 25px;
         width: 100%;
         order:3;
        }
+
+    .navLink a{
+        padding-top: 1.8em;
+        padding-bottom: 0.8em;
+    }
 
     .navMenu a{
         display: flex;
@@ -535,7 +535,6 @@ ul{
         border-top: none;
        }
        
-
     .searchButton{
         display: none;
     }
@@ -550,10 +549,22 @@ ul{
         color: white;
         font-size: 1em;
         padding: 20px 16px 20px 16px;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
+        border-radius: 20px;
         outline: none;
         cursor: pointer;
+    }
+
+    .searchFormInput{
+        padding: 19px 8px;
+    }
+
+    .search{
+        margin-left: 1rem;
+    }
+
+    .asideTitle {
+        margin-left: 1em;
+        margin-right: 1em;
     }
 
     .flexContainer{
@@ -561,7 +572,8 @@ ul{
     }
 
     .flexContainer h4{
-        margin-bottom: 0;
+        margin-bottom: 3em;
+        margin-left: -16px;
     }
     
     .activityContainer{
@@ -569,30 +581,79 @@ ul{
         padding: 0px;
     }
 
+    #accommodationTitle{
+        margin-left: -16px;
+    }
+
+    .activity{
+        margin: 0 16px 0 16px;
+    }
+
+    .activityContainer>* {
+        margin: 0;
+    }
+
     .activityColumn1, .pomegues, .frioul, .activityColumn3, .garde{
-        margin-bottom: 30px;
+        margin-bottom: 2em;
     }
 
     .activity img{
         width: 100%;
-        height: 300px;
+        height: 130px;
     }
 
     #activityTitle{
         margin-top: 0;
     }
 
+    .photoTitle {
+        padding: 10px 20px;
+        margin: 10px 0;
+    }
+
+    .activityColumn4 {
+        height: auto;
+    }
+
     footer{
         display:flex;
         flex-direction: column;
+        margin-left: -16px;
     }
 }
 
-@media all and (max-width: 470px){
+@media screen and (max-width: 723px){
+    .hotel figure{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    .accommodationBlock > * {
+        flex-basis: 100%;
+    }
+
+    .hotel img{
+        height: 110px;
+    }
+
+    .hotel figcaption {
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 470px){
+    .searchFiltersTitle{
+        flex-basis: 450px;
+    }
+
     .hotelAside img{
         height: auto;
-     }
-     .hotelAside figcaption {
+    }
+
+    .hotelAside figcaption {
         width: auto;
-     }
+    }
 }
